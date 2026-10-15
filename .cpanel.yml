@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -a dist/. $DEPLOYPATH
+    - /bin/cp -f dist/.htaccess $DEPLOYPATH || true
